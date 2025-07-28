@@ -5,7 +5,7 @@
   import * as schema from "./schema"
 
   export const client = new Client({
-      connectionString: process.env.Database_URL as string
+      connectionString: process.env.DATABASE_URL as string
   })
 
   const main = async () => {

@@ -1,4 +1,4 @@
-import { relations } from "drizzle-orm";
+import { is, relations } from "drizzle-orm";
 import { pgEnum, pgTable } from "drizzle-orm/pg-core";
 import {
   serial,
@@ -23,9 +23,11 @@ export const UsersTable = pgTable("users", {
   last_name: varchar("last_name", { length: 50 }).notNull(),
   email: varchar("email", { length: 254 }).notNull().unique(),
   password_hash: varchar("password_hash", { length: 255 }).notNull(),
+  verification_code: integer("verification_code"),
   contact_phone: text("contact_phone"),
   address: text("address"),
   role: RoleEnum("role").notNull().default("user"),
+  is_verified: boolean("is_verified").notNull().default(false),
   created_at: timestamp("created_at").notNull().defaultNow(),
   updated_at: timestamp("updated_at").notNull().defaultNow(),
 });

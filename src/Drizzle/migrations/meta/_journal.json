@@ -15,6 +15,13 @@
       "when": 1752496815533,
       "tag": "0001_lying_ogun",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1753555864589,
+      "tag": "0002_faulty_whizzer",
+      "breakpoints": true
     }
   ]
 }
